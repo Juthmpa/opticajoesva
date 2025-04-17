@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Óptica Joesva</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <!-- Menú de navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Óptica Joesva">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#landing">Landing Page</a></li>
+        <li><a href="#contacto">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal -->
+  <main>
+    <!-- Inicio -->
+    <section id="inicio">
+      <article class="banner">
+        <div class="carousel">
+          <img src="img/banner1.jpg" class="slide active">
+          <img src="img/banner2.jpg" class="slide">
+          <img src="img/banner3.jpg" class="slide">
+        </div>
+      </article>
+      <article class="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <video controls src="video/nosotros.mp4"></video>
+      </article>
+      <article class="destacados">
+        <div class="productos-destacados slider">
+          <!-- Carrusel de productos -->
+        </div>
+        <div class="servicios-destacados slider">
+          <!-- Carrusel de servicios -->
+        </div>
+        <div class="acciones">
+          <button onclick="mostrarFormulario('contacto')">Contáctanos</button>
+          <button onclick="mostrarFormulario('agenda')">Agenda tu cita</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+      <article>
+        <h2>Servicios</h2>
+        <div class="servicio">
+          <h3>Valoración visual básica</h3>
+          <p>Incluye prueba de agudeza visual - $25</p>
+        </div>
+        <div class="servicio">
+          <h3>Valoración visual especializada</h3>
+          <p>Evaluación con equipos avanzados - $50</p>
+        </div>
+        <div class="servicio">
+          <h3>Terapia visual</h3>
+          <p>Programas personalizados para mejorar visión - $40/sesión</p>
+        </div>
+        <div class="servicio">
+          <h3>Reparación y mantenimiento de armazones</h3>
+          <p>Desde $10 según daño</p>
+        </div>
+        <div class="servicio">
+          <h3>Promociones y convenios</h3>
+          <p>Consulta nuestros beneficios con empresas aliadas</p>
+        </div>
+        <button onclick="mostrarFormulario('agenda')">Agenda tu cita</button>
+      </article>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos">
+      <article>
+        <h2>Armazones</h2>
+        <div class="marca">
+          <img src="img/vizzus_logo.png"><p>Vizzus - Modernos y resistentes - desde $100</p>
+        </div>
+        <!-- Repetir por cada marca -->
+      </article>
+      <article>
+        <h2>Lentes de contacto</h2>
+        <p>Lentes blandos, duros, multifocales - desde $30/par</p>
+      </article>
+      <article>
+        <h2>Gafas de sol y gamer</h2>
+        <p>Protección UV y filtros especiales - desde $60</p>
+      </article>
+      <article>
+        <h2>Accesorios</h2>
+        <p>Estuches, paños, líquidos - desde $5</p>
+      </article>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+      <article>
+        <h2>Salud Visual</h2>
+        <div class="blog-entry">
+          <h3>Visión al conducir</h3>
+          <p>Importancia de una buena visión para manejar seguro...</p>
+        </div>
+        <!-- Repetir por cada entrada -->
+      </article>
+    </section>
+
+    <!-- Landing Page -->
+    <section id="landing">
+      <article>
+        <h2>Bienvenido a Óptica Joesva</h2>
+        <p>Cuidando tu visión</p>
+        <p>Atención visual integral para toda la familia</p>
+        <button onclick="mostrarFormulario('contacto')">Contáctanos</button>
+        <button onclick="mostrarFormulario('agenda')">Agenda tu cita</button>
+      </article>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <article>
+        <h2>Contáctanos</h2>
+        <form id="form-contacto">
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="email" placeholder="Correo electrónico" required>
+          <textarea placeholder="Mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+
+        <form id="form-agenda">
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="email" placeholder="Correo electrónico" required>
+          <input type="tel" placeholder="Teléfono" required>
+          <input type="date" required>
+          <select id="horarios" required>
+            <!-- JavaScript llenará estos horarios dinámicamente -->
+          </select>
+          <button type="submit">Agendar</button>
+        </form>
+
+        <div class="ubicacion">
+          <p>Dirección: Inglaterra E2-20 y Mariana de Jesús</p>
+          <p>Horario: L-V 9am-6pm / S-D 10am-2pm</p>
+          <p>Teléfono: 2986 444 / Cel: 0999 582 136</p>
+          <p>WhatsApp: 0999 582 136</p>
+          <iframe src="https://maps.google.com/..." width="100%" height="300"></iframe>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Óptica Joesva. Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+</body>
+</html>
