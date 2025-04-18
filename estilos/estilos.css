@@ -1,6 +1,8 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 100;
     line-height: 1.6;
     margin: 0;
     padding: 0;
