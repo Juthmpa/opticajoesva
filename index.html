@@ -14,14 +14,15 @@
         content="óptica, salud visual, lentes, gafas, gafas gamer, terapia visual, reparación de lentes y gafas, valoración visual, Quito, Joesva, lentes recetados, servicios ópticos" />
 
     <!-- Autores -->
-    <meta name="author" content="Pablo Aguilar, Andrés Guerrero, Judith Piedra, Klever Sosa" />
+    <meta name="author" content="Pablo Aguilar, Andrés Guerrero, Judith Piedra, Martín Sosa" />
 
     <!-- Favicon opcional -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <script defer src="javascript/javascript.js"></script>
 </head>
 
 <body>
@@ -58,10 +59,10 @@
         <!-- Inicio -->
         <section id="inicio">
             <article class="banner">
-                <div class="carousel">
-                    <img src="img/banner1.jpg" class="slide active">
-                    <img src="img/banner2.jpg" class="slide">
-                    <img src="img/banner3.jpg" class="slide">
+                <div class="carrusel">
+                    <img src="img/banner1.jpg" class="banner-slide active" alt="Slide 1">
+                    <img src="img/banner2.jpg" class="banner-slide" alt="Slide 2">
+                    <img src="img/banner3.jpg" class="banner-slide" alt="Slide 3">
                 </div>
             </article>
             <article class="sobre-nosotros">
@@ -185,7 +186,7 @@
                     <img src="img/gamer.jpg">
                     <p>Gamer - Modernos y resistentes - desde $65</p>
                 </div>
-                <!-- Repetir por cada marca -->
+                
             </article>
             <article>
                 <h2>Lentes de contacto</h2>
@@ -236,7 +237,7 @@
 
             <p><strong>+20 años de experiencia, 3 locales y miles de pacientes atendidos con dedicación.</strong></p>
 
-            <div class="highlights">
+            <div class="historia">
                 <ul>
                     <li><strong>2003</strong> - Primera óptica en el centro de Quito, impulsada por una familia unida.
                     </li>
@@ -268,7 +269,7 @@
                     <input type="text" placeholder="Nombre completo" required>
                     <input type="email" placeholder="Correo electrónico" required>
                     <input type="tel" placeholder="Teléfono" required>
-                    <input type="date" required>
+                    <input type="datetime-local" id="fechaCita" required>
                     <select id="horarios" required>
                         <!-- JavaScript llenará estos horarios dinámicamente -->
                     </select>
@@ -294,6 +295,8 @@
         <p>© 2025 Óptica Joesva. Todos los derechos reservados.</p>
 
     </footer>
+
+    
 </body>
 
 </html>
