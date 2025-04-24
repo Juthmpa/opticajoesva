@@ -1,6 +1,4 @@
 
-//Bootstrap JS bundle (con Popper)
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 // Cargar header y footer dinámicamente
 fetch('includes/header.html')
@@ -84,13 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Inicializar carrusel
-    iniciarCarrusel();
-});
 
 // === Carrusel de imágenes automático ===
 function iniciarCarrusel() {
-    let index = 0;
     const slides = document.querySelectorAll('.slide');
 
     function mostrarSiguienteSlide() {
