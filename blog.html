@@ -18,9 +18,12 @@
     <!-- Favicon opcional -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <!-- Estilos y librerías -->
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -34,26 +37,64 @@
     <!--Incluir el header-->
     <div id="header"></div>
 
-    <!-- Blog -->
-    <main>
-
-        <section id="blog">
-            <article>
-                <h2>Salud Visual</h2>
-                <p>“Cuidando tu visión: lentes con tecnología de punta, atención personalizada y garantía total
-                    en cada paso.”</p>
-                <div class="blog-entry">
-                    <h3>Visión al conducir</h3>
-                    <p>Importancia de una buena visión para manejar seguro...</p>
-                </div>
-                <!-- Repetir por cada entrada -->
-            </article>
+    <main class="container py-5">
+        <section id="blog" class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-primary mb-3">📰 Salud Visual</h2>
+            <p class="lead text-muted">“Cuidando tu visión: lentes con tecnología de punta, atención personalizada y
+                garantía total en cada paso.”</p>
         </section>
 
+        <div class="row g-4">
+            <!-- Blog Entry -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm rounded-4 border-0 transition-hover">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-dark fw-bold">🚗 Visión al Conducir</h5>
+                        <p class="card-text text-muted flex-grow-1">Descubre por qué una buena salud visual es esencial
+                            para una conducción segura y cómo detectar señales de alerta.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3 rounded-pill">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repite para más artículos -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm rounded-4 border-0 transition-hover">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-dark fw-bold">🧒 Visión en la infancia</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            La detección temprana de problemas visuales en niños
+                            puede marcar una gran diferencia en su aprendizaje y desarrollo.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-3 rounded-pill">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm rounded-4 border-0 transition-hover">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-dark fw-bold">💻 Gafas para pantallas</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            ¿Trabajas frente al computador todo el día? Descubre
+                            cómo las gafas con filtro azul pueden cuidar tu vista.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-3 rounded-pill">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Incluir footer -->
     <div id="footer"></div>
+
+    <!-- Bootstrap 5.3.5 Bundle JS (incluye Popper.js) desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+
 
 
 </body>

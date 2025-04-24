@@ -18,9 +18,14 @@
     <!-- Favicon opcional -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <!-- Estilos y librerías -->
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" 
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -31,60 +36,112 @@
 </head>
 
 <body>
-    <!--Incluir el header-->
+    <!-- Incluir el header -->
     <div id="header"></div>
 
-    <!-- Contacto -->
     <main>
-        <section id="contacto">
-            <article>
-                <h2>Contáctanos</h2>
-                <form id="form-contacto">
-                    <input type="text" placeholder="Nombre completo" required>
-                    <input type="email" placeholder="Correo electrónico" required>
-                    <textarea placeholder="Mensaje"></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
+        <!-- Contacto -->
+        <section id="contacto" class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">📞 Contáctanos</h2>
+                <p class="lead text-muted">Estamos aquí para ayudarte. Escríbenos o agenda tu cita.</p>
+            </div>
 
-                <form id="form-agenda">
-                    <input type="text" placeholder="Nombre completo" required>
-                    <input type="email" placeholder="Correo electrónico" required>
-                    <input type="tel" placeholder="Teléfono" required>
-                    <input type="date" required>
-                    <select id="horarios" required>
-                        <!-- JavaScript llenará estos horarios dinámicamente -->
-                    </select>
-                    <button type="submit">Agendar</button>
-                </form>
+            <div class="row g-4">
+                <!-- Formulario de contacto -->
+                <div class="col-md-6" id="formulario-contacto">
+                    <div class="card shadow-sm p-4">
+                        <h4 class="mb-4 text-secondary">Formulario de Contacto</h4>
+                        <form id="form-contacto">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" placeholder="correo@ejemplo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                        </form>
+                    </div>
+                </div>
 
-                <div class="ubicacion">
-                    <p>Dirección: Inglaterra E2-20 y Mariana de Jesús</p>
-                    <p>Teléfono: 2986444 / Cel: 0999582136</p>
-                    <p>WhatsApp: 0999582136</p>
+                <!-- Formulario de agendamiento -->
+                <div class="col-md-6" id="formulario-agenda">
+                    <div class="card shadow-sm p-4">
+                        <h4 class="mb-4 text-secondary">Agenda tu Cita</h4>
+                        <form id="form-agenda">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" placeholder="correo@ejemplo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" placeholder="09XXXXXXXX" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Fecha</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Horario</label>
+                                <select id="horarios" class="form-select" required>
+                                    <!-- JavaScript llenará estos horarios dinámicamente -->
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Agendar</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="horarios">
-                    <h4>Horarios</h4>
-                    <p>Horario: Lunes-Viernes 9:00am-18:00pm / Sábados 10:30am-13:30pm</p>
+            </div>
+
+            <!-- Información adicional -->
+            <div class="row mt-5 g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm p-4 h-100">
+                        <h5 class="text-primary mb-3">📍 Dirección y Contacto</h5>
+                        <p class="mb-1"><strong>Dirección:</strong> Inglaterra E2-20 y Mariana de Jesús</p>
+                        <p class="mb-1"><strong>Teléfono:</strong> 2986444 / <strong>Cel:</strong> 0999582136</p>
+                        <p class="mb-0"><strong>WhatsApp:</strong> 0999582136</p>
+                    </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm p-4 h-100">
+                        <h5 class="text-primary mb-3">🕒 Horarios</h5>
+                        <p><strong>Lunes a Viernes:</strong> 9:00 am – 6:00 pm</p>
+                        <p><strong>Sábados:</strong> 10:30 am – 1:30 pm</p>
+                    </div>
                 </div>
+            </div>
         </section>
 
-        <!--Inicio mapa-->
-        <section class="mapa">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d997.4491265038312!2d-78.49105763498792!3d-0.18946639229927192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sec!4v1744933246431!5m2!1ses!2sec"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section><!--Fin mapa-->
-
+        <!-- Mapa -->
+        <section class="container pb-5">
+            <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d997.4491265038312!2d-78.49105763498792!3d-0.18946639229927192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sec!4v1744933246431!5m2!1ses!2sec"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
     </main>
 
     <!-- Incluir footer -->
     <div id="footer"></div>
 
-
-
+    <!-- Bootstrap 5.3.5 Bundle JS (incluye Popper.js) desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

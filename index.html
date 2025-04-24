@@ -18,12 +18,15 @@
     <!-- Favicon opcional -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <!-- Estilos y librerías -->
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+    
+    <!-- se llama al script desarrollado en JS-->
+    <script defer src="javascript/javascript.js"></script>
 
 </head>
 
@@ -31,72 +34,186 @@
     <!--Incluir el header-->
     <div id="header"></div>
 
-    <section class="main">
-        <!--Inicio Acerca de-->
-        <section class="acerca-de" id="acerca-de">
-            <div class="contenedor">
-                <div class="foto">
-                    <img src="img/Fachada.jpeg" alt="Acerca de lobby">
-                </div>
-                <article>
-                    <h3>Acerca de</h3>
-                    <p>“En nuestra óptica, cuidamos tu salud visual con tecnología de vanguardia, productos con garantía
-                        y
-                        una asesoría totalmente personalizada. Nos diferenciamos por ofrecer una experiencia cercana,
-                        profesional y enfocada en tus necesidades reales, asegurando comodidad, precisión y confianza en
-                        cada etapa: desde la valoración visual hasta la entrega de tus lentes.”
-                    </p>
-                </article>
-                <video controls src="videos/video-oficial-joesva.mp4"></video>
-                <article>
-                    <h3>Misión</h3>
-                    <p>“Brindamos soluciones integrales para el cuidado de la salud visual, combinando productos con
-                        garantía y tecnología de calidad con una atención personalizada. Nos guiamos por nuestra
-                        filosofía
-                        PCSV (Profesionales Comprometidos con la Salud Visual), para asegurar el bienestar y confianza
-                        de
-                        cada paciente.”
-                    </p>
-                </article>
-                <article>
-                    <h3>Visión</h3>
-                    <p>Al 2028, buscamos ser una óptica representativa en la ciudad de Quito cubriendo las necesidades
-                        de
-                        nuestros pacientes con asesoría personalizada y tecnología de punta, fundamentándonos en el
-                        compromiso, transparencia, responsabilidad y calidad, mejorando así el desarrollo del área de
-                        salud
-                        visual procurando el bienestar de la sociedad en función de los procesos aplicados tanto de la
-                        valoración visual como el el proceso productivo y entrega de lentes correctores.</p>
-                </article>
-                <article>
-                    <h3>Valores</h3>
-                    <ul>
-                        <li>Compromiso</li>
-                        <li>Transparencia</li>
-                        <li>Responsabilidad</li>
-                        <li>Calidad</li>
-                    </ul>
-                </article>
-            </div>
+    <section class="main py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Acerca de -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card shadow rounded-4">
+                            <!-- Carrusel de imágenes -->
+                            <div id="carouselAcerca" class="carousel slide rounded-top-4 overflow-hidden"
+                                data-bs-ride="carousel" aria-label="Carrusel de imágenes">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/Fachada.jpeg" class="d-block w-100 rounded-top-4"
+                                            alt="Carrusel: Fachada Óptica">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/banner1.jpg" class="d-block w-100" alt="Carrusel: Banner 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/banner2.jpg" class="d-block w-100" alt="Carrusel: Banner 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/banner3.jpg" class="d-block w-100" alt="Carrusel: Banner 3">
+                                    </div>
+                                </div>
+                                <!-- Controles -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAcerca"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselAcerca"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
 
-            <article class="destacados">
-                <div class="productos-destacados slider">
-                    <!-- Carrusel de productos -->
+                            <!-- Texto Acerca de -->
+                            <div class="card-body">
+                                <h3 class="card-title">Acerca de</h3>
+                                <p class="card-text">
+                                    “En nuestra óptica, cuidamos tu salud visual con tecnología de vanguardia,
+                                    productos con garantía y una asesoría totalmente personalizada.
+                                    Nos diferenciamos por ofrecer una experiencia cercana,
+                                    profesional y enfocada en tus necesidades reales, asegurando comodidad,
+                                    precisión y confianza en cada etapa: desde la valoración visual
+                                    hasta la entrega de tus lentes.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="servicios-destacados slider">
-                    <!-- Carrusel de servicios -->
-                </div>
-                <div class="acciones">
-                    <button onclick="mostrarFormulario('contacto')">Contáctanos</button>
-                    <button onclick="mostrarFormulario('agenda')">Agenda tu cita</button>
-                </div>
-            </article>
-        </section>
 
+                <!-- Video -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow rounded-4">
+                            <div class="card-body">
+                                <h3 class="card-title">Conócenos</h3>
+                                <video class="w-100 rounded-3" controls src="videos/video-oficial-joesva.mp4"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor con igual altura para columnas -->
+                <div class="row g-4 align-items-stretch">
+                    <!-- Misión -->
+                    <div class="col-12 col-md-6">
+                        <div class="card shadow rounded-4 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Misión</h3>
+                                <p class="card-text">
+                                    Brindamos soluciones integrales para el cuidado de la salud visual,
+                                    combinando productos con garantía y tecnología de calidad con una
+                                    atención personalizada. Nos guiamos por nuestra filosofía
+                                    PCSV (Profesionales Comprometidos con la Salud Visual),
+                                    para asegurar el bienestar y confianza de cada paciente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visión -->
+                    <div class="col-12 col-md-6">
+                        <div class="card shadow rounded-4 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Visión</h3>
+                                <p class="card-text">
+                                    Al 2028, buscamos ser una óptica representativa en la ciudad de Quito cubriendo las
+                                    necesidades de nuestros pacientes con asesoría personalizada y tecnología de punta,
+                                    fundamentándonos en el compromiso, transparencia, responsabilidad y calidad,
+                                    mejorando así el desarrollo del área de salud visual procurando el bienestar
+                                    de la sociedad en función de los procesos aplicados tanto de la
+                                    valoración visual como el el proceso productivo y entrega de lentes correctores.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="col-12 col-md-6">
+                    <div class="card shadow rounded-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Valores</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-handshake me-2"></i> Compromiso
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-search-dollar me-2"></i> Transparencia
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-shield-alt me-2"></i> Responsabilidad
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-trophy me-2"></i> Calidad
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Productos y Servicios Destacados -->
+                <div class="col-12 col-md-6">
+                    <div class="card shadow rounded-4">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Destacados</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="border rounded-3 p-3 text-center bg-white">
+                                        <h5>Productos Destacados</h5>
+                                        <div class="vitrina bg-light d-flex justify-content-center align-items-center rounded"
+                                            style="height:200px;">
+                                            <span class="text-muted">Espacio reservado para productos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border rounded-3 p-3 text-center bg-white">
+                                        <h5>Servicios Destacados</h5>
+                                        <div class="vitrina bg-light d-flex justify-content-center align-items-center rounded"
+                                            style="height:200px;">
+                                            <span class="text-muted">Espacio reservado para servicios</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <a href="#formulario-contacto" class="btn btn-primary me-2">Contáctanos</a>
+                                <a href="#formulario-agenda" class="btn btn-success">Agenda tu cita</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /row -->
+        </div> <!-- /container -->
     </section>
+
+    <script>
+        function mostrarFormulario(tipo) {
+            alert("Formulario a mostrar: " + tipo);
+            // Aquí puedes conectar con un modal o formulario real
+        }
+    </script>
 
     <!-- Incluir footer -->
     <div id="footer"></div>
+
+    <!-- Bootstrap 5.3.5 Bundle JS (incluye Popper.js) desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+
 
 </body>
 

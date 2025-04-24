@@ -1,13 +1,21 @@
 
 
 // Cargar header y footer dinámicamente
-fetch('includes/header.html')
-.then(response => response.text())
-.then(data => document.getElementById('header').innerHTML = data);
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("includes/header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  });
 
-fetch('includes/footer.html')
-.then(response => response.text())
-.then(data => document.getElementById('footer').innerHTML = data);
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("includes/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  });
 
 // Slider automático del banner
 let currentSlide = 0;
@@ -82,9 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Inicializar carrusel
+    iniciarCarrusel();
+});
 
 // === Carrusel de imágenes automático ===
 function iniciarCarrusel() {
+    let index = 0;
     const slides = document.querySelectorAll('.slide');
 
     function mostrarSiguienteSlide() {

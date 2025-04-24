@@ -18,9 +18,14 @@
     <!-- Favicon opcional -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <!-- Estilos y librerías -->
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" 
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -35,69 +40,100 @@
     <div id="header"></div>
 
     <!-- Servicios -->
-    <main>
-
-        <section class="servicios-visual">
-            <article>
-                <h2>🩺 Servicios de Salud Visual</h2>
-                <p>“Cuidando tu visión: lentes con tecnología de punta, atención personalizada y garantía total
-                    en cada paso.”</p>
-                <div class="servicio">
-                    <h3>🔍 Valoración Visual Básica</h3>
-                    <p><strong>$3</strong></p>
-                    <p>Incluye prueba de agudeza visual. Ideal para chequeos generales y prescripción de lentes.</p>
-                </div>
-
-                <div class="servicio">
-                    <h3>🧪 Valoración Visual Especializada</h3>
-                    <h3>Ocupacional / Estudiantil</h3>
-                    <p><strong>$6</strong></p>
-                    <p>Evaluación completa utilizando equipos de tecnología avanzada. Pruebas para detectar problemas
-                        como astigmatismo o presbicia. Certificado Agudeza Visual</p>
-                </div>
-
-                <div class="servicio">
-                    <h3>🚗 Valoración Visual Conducción</h3>
-                    <p><strong>$10</strong></p>
-                    <p>Evaluación visual enfocada en los requisitos para licencias de conducir. Incluye prueba de
-                        agudeza visual y emisión del Informe de Valoración Visual Integral</p>
-                </div>
-
-                <div class="servicio">
-                    <h3>👁️‍🗨️ Terapia Visual</h3>
-                    <p><strong>$15 por sesión</strong></p>
-                    <p>Programas personalizados para mejorar habilidades visuales. Recomendado para fatiga visual,
-                        enfoque y coordinación ojo-mano.</p>
-                </div>
-
-                <div class="servicio">
-                    <h3>🛠️ Reparación y Mantenimiento de Armazones</h3>
-                    <p><strong>Desde $10</strong></p>
-                    <p>Costo según el tipo de daño. Servicios incluyen:</p>
-                    <ul>
-                        <li>Ajustes de montura</li>
-                        <li>Cambio de plaquetas</li>
-                        <li>Tornillos, soldadura y pulido</li>
-                        <li>Revisión general de lentes y estructura</li>
-                    </ul>
-                </div>
-
-                <div class="servicio">
-                    <h3>🎁 Promociones y Convenios</h3>
-                    <p><em>Consulta nuestros beneficios exclusivos</em></p>
-                    <p>Contamos con convenios corporativos y descuentos especiales para colaboradores y sus familias.
-                    </p>
-                </div>
-                <button onclick="mostrarFormulario('agenda')">Agenda tu cita</button>
-            </article>
+    <main class="container py-5">
+        <section class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-primary mb-3">🩺 Servicios de Salud Visual</h2>
+            <p class="lead text-muted">“Cuidando tu visión: lentes con tecnología de punta, atención personalizada y garantía total en cada paso.”</p>
         </section>
+    
+        <div class="row g-4">
+            <!-- Servicio -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow rounded-4 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">🔍 Valoración Visual Básica</h5>
+                        <p class="text-success fw-bold fs-5">$3</p>
+                        <p class="card-text">Incluye prueba de agudeza visual. Ideal para chequeos generales y prescripción de lentes.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Servicio -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow rounded-4 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">🧪 Valoración Visual Especializada</h5>
+                        <p class="text-success fw-bold fs-5">$6</p>
+                        <p class="card-text">Evaluación completa con tecnología avanzada. Incluye pruebas para astigmatismo, presbicia y certificado de agudeza visual.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Servicio -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow rounded-4 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">🚗 Valoración Visual Conducción</h5>
+                        <p class="text-success fw-bold fs-5">$10</p>
+                        <p class="card-text">Enfocado en requisitos para licencias de conducir. Incluye informe de valoración visual integral.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Servicio -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow rounded-4 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">👁️‍🗨️ Terapia Visual</h5>
+                        <p class="text-success fw-bold fs-5">$15 por sesión</p>
+                        <p class="card-text">Programas personalizados para fatiga visual, enfoque y coordinación ojo-mano.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Servicio -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow rounded-4 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">🛠️ Reparación y Mantenimiento</h5>
+                        <p class="text-success fw-bold fs-5">Desde $10</p>
+                        <p class="card-text">Incluye ajustes, cambio de plaquetas, soldadura, tornillos y revisión general.</p>
+                        <ul class="list-unstyled small mt-3">
+                            <li>✔️ Ajustes de montura</li>
+                            <li>✔️ Cambio de plaquetas</li>
+                            <li>✔️ Tornillos y soldadura</li>
+                            <li>✔️ Revisión estructural</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Servicio -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow rounded-4 border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">🎁 Promociones y Convenios</h5>
+                        <p class="fst-italic text-muted">Consulta nuestros beneficios exclusivos</p>
+                        <p class="card-text">Descuentos especiales para colaboradores y sus familias mediante convenios corporativos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="text-center mt-5">
+            <button class="btn btn-primary btn-lg rounded-pill px-4" onclick="mostrarFormulario('agenda')">
+                📅 Agenda tu cita
+            </button>
+        </div>
     </main>
 
     <!-- Incluir footer -->
     <div id="footer"></div>
 
-
-
+    <!-- Bootstrap 5.3.5 Bundle JS (incluye Popper.js) desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
 
 </body>
 
